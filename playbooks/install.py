@@ -142,7 +142,7 @@ def install_bench(args):
 		shutil.rmtree(tmp_bench_repo)
 
 def check_distribution_compatibility():
-	supported_dists = {'ubuntu': [14, 15, 16, 18, 19], 'debian': [8, 9],
+	supported_dists = {'ubuntu': [14, 15, 16, 18, 19], 'debian': [8, 9, 10],
 		'centos': [7], 'macos': [10.9, 10.10, 10.11, 10.12]}
 
 	dist_name, dist_version = get_distribution_info()
@@ -204,7 +204,7 @@ def clone_bench_repo(args):
 		clone_path = tmp_bench_repo
 
 	branch = args.bench_branch or 'master'
-	repo_url = args.repo_url or 'https://github.com/frappe/bench'
+	repo_url = args.repo_url or 'https://github.com/quirum/bench'
 
 
 	success = run_os_command(
