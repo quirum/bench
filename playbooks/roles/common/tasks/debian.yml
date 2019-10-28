@@ -30,7 +30,7 @@
     - libtiff5-dev
     - tcl8.5-dev
     - tk8.5-dev
-  when: ansible_distribution_version | version_compare('8', 'ge')
+  when: ansible_distribution_version | version_compare('9', 'le')
 
 
 - name: install pdf prerequisites debian
